@@ -7,8 +7,8 @@ export const Header = styled.header`
 `;
 
 export const Header__Title = styled.h1`
+  color: ${(props) => props.theme.colors.text};
   margin: 0;
   padding: 0;
-  color: #fff;
   padding-top: ${(props) => props.theme.spaces.medium};
 `;
