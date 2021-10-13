@@ -1,12 +1,12 @@
 const theme = {
   colors: {
     background: '#00008B',
-    category_internet: '#620eeeee',
-    category_food: '#00FFFF',
-    category_salary: '#135e01',
-    category_power: '#ff0',
-    category_water: '#00f',
+    blue: '#00f',
+    green: '#135e01',
+    light_blue: '#00FFFF',
+    purple: '#620eeeee',
     text: '#ffffff',
+    yellow: '#ff0',
   },
   spaces: {
     small: '15px',
