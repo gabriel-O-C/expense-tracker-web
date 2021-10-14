@@ -4,7 +4,7 @@ import * as C from './App.styles'
 import { Header } from './components';
 import theme from './styles/theme';
 import { items } from './data/items'
-import { getCurrentMonth } from './helpers/dateFilters'
+import { filterListByMonth, getCurrentMonth } from './helpers/dateFilters'
 import { Item } from './types/Item';
 function App() {
 
@@ -13,6 +13,7 @@ function App() {
   const [currentMonth, setCurrentMonth] = useState(getCurrentMonth())
   
   useEffect(() => {
+    setFilteredList(filterListByMonth(list, currentMonth))
     
   }, [list, currentMonth])
   return (
