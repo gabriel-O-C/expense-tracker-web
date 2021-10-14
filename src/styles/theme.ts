@@ -7,11 +7,18 @@ const theme = {
     purple: '#620eeeee',
     text: '#ffffff',
     yellow: '#ff0',
+    light_gray: '#cccccc',
   },
   spaces: {
     small: '15px',
     medium: '30px',
     large: '45px'
+  },
+  sizes: {
+    small: '50px',
+    medium: '100px',
+    medium_small: '130px',
+    large: '150px'
   }
 }
 

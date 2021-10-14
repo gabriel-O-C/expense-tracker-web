@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { ThemeProvider } from 'styled-components';
 import * as C from './App.styles'
-import { Header } from './components';
+import { Header, TableArea } from './components';
 import theme from './styles/theme';
 import { items } from './data/items'
 import { filterListByMonth, getCurrentMonth } from './helpers/dateFilters'
@@ -21,7 +21,7 @@ function App() {
       <C.Container>
         <Header />
         <C.Main>
-          
+          <TableArea list={filteredList}/>
         </C.Main>
       </C.Container>
     </ThemeProvider>
