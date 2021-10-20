@@ -7,13 +7,16 @@ import {
   ResumeArea,
 } from "./styles";
 import { formatCurrentMonth } from "../../helpers/dateFilters";
+import { ResumeItem } from "..";
 
 type Props = {
   currentMonth: string;
   onMonthChange: (newMonth: string) => void;
+  income: number;
+  expense: number;
 };
 
-const InfoArea = ({ currentMonth, onMonthChange }: Props) => {
+const InfoArea = ({ currentMonth, onMonthChange, income, expense }: Props) => {
   const handlePrevMonth = () => {
     let [year, month] = currentMonth.split("-");
     let currentDate = new Date(parseInt(year), parseInt(month) - 1, 1);
@@ -35,7 +38,11 @@ const InfoArea = ({ currentMonth, onMonthChange }: Props) => {
         <MonthTitle>{formatCurrentMonth(currentMonth)}</MonthTitle>
         <MonthArrow onClick={handleNextMonth}>→</MonthArrow>
       </MonthArea>
-      <ResumeArea>...</ResumeArea>
+      <ResumeArea>
+        <ResumeItem title="Receitas" value={income} />
+        <ResumeItem title="Despesas" value={expense} />
+        <ResumeItem title="Balanço" value={income - expense} />
+      </ResumeArea>
     </Container>
   );
 };

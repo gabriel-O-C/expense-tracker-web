@@ -6,6 +6,8 @@ export const Container = styled.div`
   border-radius: 10px;
   padding: 20px;
   margin-top: -40px;
+  display: flex;
+  align-items: center;
 `;
 
 export const MonthArea = styled.div`
