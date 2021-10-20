@@ -8,6 +8,7 @@ const theme = {
     text: '#ffffff',
     yellow: '#ff0',
     light_gray: '#cccccc',
+    red: '#f00'
   },
   spaces: {
     small: '15px',
