@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import * as C from "./App.styles";
-import { Header, InfoArea, TableArea } from "./components";
+import { Header, InfoArea, InputArea, TableArea } from "./components";
 import theme from "./styles/theme";
 import { items } from "./data/items";
 import { filterListByMonth, getCurrentMonth } from "./helpers/dateFilters";
@@ -36,6 +36,11 @@ function App() {
   const handleMonthChange = (newMonth: string) => {
     setCurrentMonth(newMonth);
   };
+  const handleAddItem = (item: Item) => {
+    let newList = [...list];
+    newList.push(item);
+    setList(newList);
+  };
   return (
     <ThemeProvider theme={theme}>
       <C.Container>
@@ -47,6 +52,7 @@ function App() {
             income={income}
             expense={expense}
           />
+          <InputArea onAdd={handleAddItem} />
           <TableArea list={filteredList} />
         </C.Main>
       </C.Container>

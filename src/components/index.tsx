@@ -3,3 +3,4 @@ export { default as TableArea } from "./TableArea";
 export { default as TableItem } from "./TableItem";
 export { default as InfoArea } from "./InfoArea";
 export { default as ResumeItem } from "./ResumeItem";
+export { default as InputArea } from "./InputArea";
