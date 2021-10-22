@@ -8,6 +8,7 @@ import {
 } from "./styles";
 import { formatCurrentMonth } from "../../helpers/dateFilters";
 import { ResumeItem } from "..";
+import theme from "../../styles/theme";
 
 type Props = {
   currentMonth: string;
@@ -41,7 +42,11 @@ const InfoArea = ({ currentMonth, onMonthChange, income, expense }: Props) => {
       <ResumeArea>
         <ResumeItem title="Receitas" value={income} />
         <ResumeItem title="Despesas" value={expense} />
-        <ResumeItem title="Balanço" value={income - expense} />
+        <ResumeItem
+          title="Balanço"
+          value={income - expense}
+          color={income - expense < 0 ? theme.colors.red : theme.colors.green}
+        />
       </ResumeArea>
     </Container>
   );

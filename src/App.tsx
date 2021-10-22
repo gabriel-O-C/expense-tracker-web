@@ -19,18 +19,18 @@ function App() {
   }, [list, currentMonth]);
 
   useEffect(() => {
-    let income = 0;
-    let expense = 0;
+    let incomeCount = 0;
+    let expenseCount = 0;
 
     for (let i in filteredList) {
       if (categories[filteredList[i].category].expense) {
-        expense += filteredList[i].value;
+        expenseCount += filteredList[i].value;
       } else {
-        income += filteredList[i].value;
+        incomeCount += filteredList[i].value;
       }
     }
-    setIncome(income);
-    setExpense(expense);
+    setIncome(incomeCount);
+    setExpense(expenseCount);
   }, [filteredList]);
 
   const handleMonthChange = (newMonth: string) => {

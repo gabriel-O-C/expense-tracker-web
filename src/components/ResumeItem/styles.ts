@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import theme from "../../styles/theme";
 
 export const Container = styled.section`
   flex: 1;
@@ -11,7 +12,8 @@ export const Title = styled.p`
   margin-bottom: 10px;
 `;
 
-export const Info = styled.div`
+export const Info = styled.div<{color?: string}>`
   text-align: center;
   font-weight: 700;
+  color: ${props => props.color ?? theme.colors.black};
 `;
