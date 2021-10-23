@@ -6,6 +6,10 @@ export const Container = styled.div`
   border-radius: 10px;
   margin-top: 20px;
   display: flex;
+  
+  @media screen and (max-width: 450px){
+    flex-direction: column;
+  }
 `;
 
 export const Button = styled.button`

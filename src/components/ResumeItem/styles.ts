@@ -10,6 +10,10 @@ export const Title = styled.p`
   font-weight: 700;
   text-align: center;
   margin-bottom: 10px;
+
+  @media screen and (max-width: 450px){
+    margin: 5px;
+  }
 `;
 
 export const Info = styled.div<{color?: string}>`
